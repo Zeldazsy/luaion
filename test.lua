@@ -14,7 +14,7 @@ local function ValidateHWID()
     end
 
     -- Construct URL with query parameters
-    local urlWithParams = URL .. "?Key=" .. HttpService:UrlEncode(KEY) .. "&hwid=" .. HttpService:UrlEncode(HWID)
+    local urlWithParams = URL .. "?Key=" .. HttpService:UrlEncode(getgenv().Key) .. "&hwid=" .. HttpService:UrlEncode(HWID)
     
     -- Prepare the HTTP request
     local requestData = {
